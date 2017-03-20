@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script
+      src="https://code.jquery.com/jquery-3.2.0.min.js"
+      integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+      crossorigin="anonymous"></script>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-      <form method="post" action="/posts">
-          <input type="text" name="message" value="message goes here">
+      <form class="form"
+       method="post" action="/posts">
+          <input type="text" name="message" value="message goes here" class="messageinput">
+
           <input type="submit" value="Submit">
       </form>
+      <div class="note"></div>
   </body>
+<script>
+var myCoolFunction = function (e) {
+    e.preventDefault();
+    var data = {};
+    data.message = $(".messageinput").val();
+      $.post( "/posts" , data );
+      $(".note").text("Thanks! Your message was saved!");
+  }
+    $(".form").on("submit", myCoolFunction);
+</script>
 </html>
