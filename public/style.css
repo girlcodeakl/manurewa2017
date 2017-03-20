@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: #d3e4ff;
 }
 
 .message-list {
@@ -18,3 +19,15 @@ h1 {
   border: 2px solid #FFB03B;
   border-radius: 5px;
 }
+
+
+input[type=text] {
+    color: #ff00f2;
+    border: 2px solid black;
+    font-style: oblique;
+}
+
+input[type=submit] {
+   color: solid #0eef19;
+   border: 2px solid black;
+ }
