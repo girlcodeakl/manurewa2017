@@ -10,14 +10,18 @@
     <h1 class="title">Message Feed</h1>
     <div class="message-list">
     </div>
+    <div class="nav-bar">
+      <a href="feed.html"> Feed</a>
+      <a href="post.html">Post</a>
+      <a href="index.html">Home</a>
+    </div>
     <script>
 //Hello! This is the start of the JavaScript.
 
 var displayMessage = function(post) {
-  var postElement = $('<div class="message">' + post + '</div>');
+  var postElement = $('<div class="message">' + post.message + '</div>');
   $(".message-list").append(postElement);
 }
-
 var createFeed = function(data) {
   data.forEach(displayMessage);
 }

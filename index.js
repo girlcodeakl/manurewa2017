@@ -23,10 +23,12 @@ app.get('/posts', sendPostsList);
 
 //let a client POST something new
 var saveNewPost = function (request, response) {
-  var dbPosts = database.collection('posts');
-dbPosts.insert(request.body.message);
   console.log(request.body.message); //write it on the command prompt so we can see
-  posts.push(request.body.message); //save it in our list
+  var post= {};
+post.message = request.body.message;
+var dbPosts = database.collection('posts');
+dbPosts.insert(post);
+posts.push(post);
   response.send("thanks for your message. Press back to add another");
 }
 app.post('/posts', saveNewPost);

@@ -18,3 +18,16 @@ h1 {
   border: 2px solid #FFB03B;
   border-radius: 5px;
 }
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+}
+.nav-bar {
+  border: 2px solid #FFB03B;
+  margin: 50px;
+  background-color:#F3C77A
+}
