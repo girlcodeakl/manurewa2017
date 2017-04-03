@@ -19,8 +19,6 @@ h1 {
   border: 2px solid #FFB03B;
   border-radius: 5px;
 }
-<<<<<<< HEAD
-
 
 input[type=text] {
     color: #ff00f2;
@@ -32,7 +30,7 @@ input[type=submit] {
    color: solid #0eef19;
    border: 2px solid black;
  }
-=======
+
 li {
   float: left;
 }
@@ -46,4 +44,3 @@ a {
   margin: 50px;
   background-color:#F3C77A
 }
->>>>>>> master
