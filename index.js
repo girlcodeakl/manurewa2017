@@ -25,15 +25,17 @@ app.get('/posts', sendPostsList);
 var saveNewPost = function (request, response) {
   console.log(request.body.message); //write it on the command prompt so we can see
   var post= {};
-post.message = request.body.message;
-post.image = request.body.image;
-var dbPosts = database.collection('posts');
-dbPosts.insert(post);
-posts.push(post);
+  post.message = request.body.message;
+  post.image = request.body.image;
+  var dbPosts = database.collection('posts');
+  if (post.image === "") {
+    post.image = "http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg";
+  }
+  dbPosts.insert(post);
+  posts.push(post);
   response.send("thanks for your message. Press back to add another");
 }
 app.post('/posts', saveNewPost);
-
 //listen for connections on port 3000
 app.listen(3000);
 console.log("Hi! I am listening at http://localhost:3000");
