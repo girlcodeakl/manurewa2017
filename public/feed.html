@@ -8,6 +8,7 @@
   </head>
   <body>
     <h1 class="title">Reviews</h1>
+    <input type="text" name="Filter" placeholder="Filter by tag" class="filter">
     <div class="message-list">
     </div>
     <div class="nav-bar">
@@ -17,7 +18,18 @@
     </div>
     <script>
 //Hello! This is the start of the JavaScript.
-
+var filterFunction = function() {
+  var searchText = $(".filter").val();
+  $(".message-list").children().each(function(number, postNode) {
+   //code in here will be run once for each post in the list
+   if (postNode.innerHTML.toLowerCase().indexOf(searchText.toLowerCase()) > -1){
+     $(postNode).removeClass("hidden");
+   }else {
+     $(postNode).addClass("hidden");
+   }
+ });
+}
+$(".filter").on("keyup", filterFunction);
 var displayMessage = function(post) {
   var postElement = $('<div class="message">' + post.message + '</div>');
   $(".message-list").append(postElement);
