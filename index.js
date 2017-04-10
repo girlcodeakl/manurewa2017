@@ -26,6 +26,7 @@ var saveNewPost = function (request, response) {
   console.log(request.body.message); //write it on the command prompt so we can see
   var post= {};
   post.message = request.body.message;
+  post.link = request.body.link;
   post.image = request.body.image;
   var dbPosts = database.collection('posts');
   if (post.image === "") {

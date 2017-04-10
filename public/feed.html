@@ -35,6 +35,8 @@ var displayMessage = function(post) {
   $(".message-list").append(postElement);
   var imageElement = $('<div class="image">'+ '<img src= "'+ post.image+'"> '+ '</div>');
 postElement.append(imageElement);
+var linkElement = $('<div class="link">'+ '<a href= "'+ post.link+'"> Visit Link </a>'+ '</div>');
+postElement.append(linkElement);
 }
 var createFeed = function(data) {
   data.forEach(displayMessage);

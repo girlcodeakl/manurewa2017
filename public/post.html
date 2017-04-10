@@ -11,7 +11,7 @@
 <body>
   <form class="form" method="post" action="/posts">
     <input type="text" name="message" placeholder="review goes here" class="messageinput">
-    <input type="text" name="author" placeholder="author">
+    <input type="text" name="link" placeholder="link" class="linkInput">
     <input type="text" name="image" placeholder="url of an image of the movie" class="imageinput">
     <input type="submit" value="Submit">
   </form>
@@ -27,6 +27,7 @@ var myCoolFunction = function (e) {
   e.preventDefault();
   var data = {};
   data.message = $(".messageinput").val();
+  data.link = $(".linkInput").val();
   data.image = $ (".imageinput").val();
   $.post( "/posts" , data );
   $(".note").text("Thanks! Your message was saved!");
