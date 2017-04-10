@@ -12,6 +12,10 @@ h1 {
   color: #FFB03B;
 }
 
+.hidden {
+  display: none
+}
+
 .message {
   color: #468966;
   margin: 10px;
