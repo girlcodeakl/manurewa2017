@@ -1,4 +1,7 @@
 {
+  "scripts": {
+     "start": "node index.js"
+   },
   "name": "girlcodeproject",
   "version": "0.0.0",
   "description": "a simple web app",
