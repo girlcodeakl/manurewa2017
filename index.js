@@ -30,7 +30,7 @@ var saveNewPost = function (request, response) {
   post.image = request.body.image;
   var dbPosts = database.collection('posts');
   if (post.image === "") {
-    post.image = "http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg";
+    post.image = "http://data.photofunky.net/output/image/d/1/9/d/d19da6/photofunky.gif";
   }
   dbPosts.insert(post);
   posts.push(post);
@@ -38,7 +38,7 @@ var saveNewPost = function (request, response) {
 }
 app.post('/posts', saveNewPost);
 //listen for connections on port 3000
-app.listen(3000);
+app.listen((process.env.PORT || 3000));
 console.log("Hi! I am listening at http://localhost:3000");
 var mongodb = require('mongodb');
 var uri = 'mongodb://KatandJazmine:KaJa12345@ds137040.mlab.com:37040/7keeppostswhenserverrestarts';
