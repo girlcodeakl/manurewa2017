@@ -29,7 +29,7 @@ var saveNewPost = function (request, response) {
   post.image = request.body.image;
   var dbPosts = database.collection('posts');
   if (post.image === "") {
-    post.image = "http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg";
+    post.image = "http://data.photofunky.net/output/image/d/1/9/d/d19da6/photofunky.gif";
   }
   dbPosts.insert(post);
   posts.push(post);
