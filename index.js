@@ -37,7 +37,7 @@ var saveNewPost = function (request, response) {
 }
 app.post('/posts', saveNewPost);
 //listen for connections on port 3000
-app.listen(3000);
+app.listen((process.env.PORT || 3000));
 console.log("Hi! I am listening at http://localhost:3000");
 var mongodb = require('mongodb');
 var uri = 'mongodb://KatandJazmine:KaJa12345@ds137040.mlab.com:37040/7keeppostswhenserverrestarts';
