@@ -10,8 +10,8 @@
 </head>
 <body>
   <form class="form" method="post" action="/posts">
-  <textarea name="Text1" cols="40" rows="10" class="messageinput" placeholder="Review goes here"></textarea>
-    <input type="text" name="author" placeholder="author">
+    <textarea name="Text1" cols="40" rows="10" class="messageinput" placeholder="Review goes here"></textarea>
+    <input type="text" name="link" placeholder="link" class="linkInput">
     <input type="text" name="image" placeholder="url of an image of the movie" class="imageinput">
     <input type="submit" value="Submit">
   </form>
@@ -27,6 +27,7 @@ var myCoolFunction = function (e) {
   e.preventDefault();
   var data = {};
   data.message = $(".messageinput").val();
+  data.link = $(".linkInput").val();
   data.image = $ (".imageinput").val();
   $.post( "/posts" , data );
   $(".note").text("Thanks! Your message was saved!");
