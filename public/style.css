@@ -1,34 +1,35 @@
 body {
   text-align: center;
-  background-color: #d3e4ff;
+  background-color: #2D112C;
+  color: white
 }
 
 .message-list {
-  background-color: #FFF0A5;
+  background-color: #530031;
   padding: 20px;
 }
 
 h1 {
-  color: #FFB03B;
+  color: white;
 }
 
 .message {
-  color: #468966;
+  color: #EF4339;
   margin: 10px;
   padding: 10px;
-  border: 2px solid #FFB03B;
+  border: 2px solid #CA293E;
   border-radius: 5px;
 }
 
 input[type=text] {
-    color: #ff00f2;
-    border: 2px solid black;
+    color: #CA293E;
+    border: 2px solid #530031;
     font-style: oblique;
 }
 
 input[type=submit] {
-   color: solid #0eef19;
-   border: 2px solid black;
+   color: solid #530031;
+   border: 2px solid pink;
  }
 
 li {
@@ -36,13 +37,14 @@ li {
 }
 
 a {
+  color: #CA293E;
   display: block;
   padding: 8px;
 }
 .nav-bar {
-  border: 2px solid #FFB03B;
+  border: 2px solid #CA293E;
   margin: 50px;
-  background-color:#F3C77A
+  background-color:#530031
 }
 img{
   width: 250px;
